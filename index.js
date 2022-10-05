@@ -2,6 +2,7 @@ var ndrums = document.querySelectorAll(".drum").length;
 
 for (var i = 0; i < ndrums; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function() {
+    buttonAnimation(this.innerHTML);
     switch (this.innerHTML) {
       case "w":
         var audio = new Audio('sounds/tom-1.mp3');
@@ -37,6 +38,7 @@ for (var i = 0; i < ndrums; i++) {
 
 }
 document.addEventListener("keypress", (event) => {
+buttonAnimation(event.key);
   switch (event.key) {
     case "w":
       var audio = new Audio('sounds/tom-1.mp3');
@@ -69,3 +71,10 @@ document.addEventListener("keypress", (event) => {
   }
 
 });
+
+function buttonAnimation(key){
+  document.querySelector("."+key).classList.add("pressed");
+  setTimeout(function(){
+    document.querySelector("."+key).classList.remove("pressed");
+  }, 100);
+}
