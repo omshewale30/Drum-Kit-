@@ -24,7 +24,7 @@ for (var i = 0; i < ndrums; i++) {
         audio.play();
         break;
       case "k":
-        var audio = new Audio('sounds/tom-6.mp3');
+        var audio = new Audio('sounds/tom-7.mp3');
         audio.play();
         break;
       case "l":
@@ -34,7 +34,6 @@ for (var i = 0; i < ndrums; i++) {
     }
 
   });
-
 
 }
 document.addEventListener("keypress", (event) => {
@@ -60,7 +59,7 @@ document.addEventListener("keypress", (event) => {
       audio.play();
       break;
     case "k":
-      var audio = new Audio('sounds/tom-6.mp3');
+      var audio = new Audio('sounds/tom-7.mp3');
       audio.play();
       break;
     case "l":
